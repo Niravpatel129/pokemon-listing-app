@@ -1,5 +1,29 @@
-<div>
-  <div>
-    {{ selectedPokemon?.name }}
+<div class="container" *ngIf="selectedPokemonDetails.name">
+  <div class="field">
+    <h1>{{ selectedPokemonDetails?.name | titlecase }}</h1>
   </div>
+  <div class="field">
+    <h2>Height</h2>
+    <h4>{{ selectedPokemonDetails?.height }}</h4>
+  </div>
+  <div class="field">
+    <h2>Category</h2>
+    <h4>3' 03"</h4>
+  </div>
+  <div class="field">
+    <h2>Weight</h2>
+    <h4>{{ selectedPokemonDetails?.weight }}</h4>
+  </div>
+  <div class="field">
+    <h2>Abilities</h2>
+    <ng-container *ngFor="let abilitie of selectedPokemonDetails.abilities">
+      <div>
+        <h4>
+          {{ abilitie.ability.name }}
+        </h4>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- {{ selectedPokemonDetails | json }} -->
 </div>

@@ -18,7 +18,6 @@ export class AppComponent {
   }
 
   handleSelectPokemon(pokemon: Pokemon) {
-    console.log('hi');
     this.selectedPokemon = pokemon;
   }
 }
