@@ -64,6 +64,18 @@ export class PokemonService {
         image:
           'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png',
       },
+      {
+        name: 'Eevee',
+        type: 'Normal',
+        image:
+          'https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png',
+      },
+      {
+        name: 'Snorlax',
+        type: 'Normal',
+        image:
+          'https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png',
+      },
     ];
   }
 }

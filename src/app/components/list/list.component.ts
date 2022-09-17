@@ -8,5 +8,6 @@ import Pokemon from 'src/types/Pokemon.type';
 })
 export class ListComponent {
   @Input() pokemons: Pokemon[] | undefined;
+  @Input() searchTerm: string | undefined;
   @Output() selectPokemon = new EventEmitter<Pokemon>();
 }

@@ -10,6 +10,7 @@ import { PokemonService } from './services/pokemon.service';
 export class AppComponent {
   title = 'pokemon-listing-app';
   selectedPokemon: Pokemon | undefined;
+  searchTerm = '';
 
   constructor(private PokemonService: PokemonService) {}
 

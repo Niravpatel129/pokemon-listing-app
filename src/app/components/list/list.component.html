@@ -3,12 +3,16 @@
   *ngFor="let pokemon of pokemons"
   (click)="selectPokemon.emit(pokemon)"
 >
-  <img [src]="pokemon.image" [alt]="pokemon.name" />
-  <div class="content">
-    <div class="name">
-      {{ pokemon.name }}
-      <div class="type">
-        {{ pokemon.type }}
+  <div
+    *ngIf="pokemon.name.toLowerCase().includes(searchTerm?.toLowerCase() || '')"
+  >
+    <img [src]="pokemon.image" [alt]="pokemon.name" />
+    <div class="content">
+      <div class="name">
+        {{ pokemon.name }}
+        <div class="type">
+          {{ pokemon.type }}
+        </div>
       </div>
     </div>
   </div>

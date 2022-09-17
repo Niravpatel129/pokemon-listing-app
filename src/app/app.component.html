@@ -1,5 +1,10 @@
+<!-- search pokemon -->
+<div class="search-container">
+  <input type="text" placeholder="Search Pokemon" [(ngModel)]="searchTerm" />
+</div>
 <div class="app-container">
   <app-list
+    [searchTerm]="searchTerm"
     (selectPokemon)="handleSelectPokemon($event)"
     [pokemons]="getAllPokemons()"
   ></app-list>
