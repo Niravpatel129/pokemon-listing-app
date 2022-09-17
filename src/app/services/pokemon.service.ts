@@ -19,8 +19,6 @@ export class PokemonService {
 
   constructor(private http: HttpClient) {
     this.fetchPokemons();
-
-    console.log(this.pokemons);
   }
 
   fetchSinglePokemon(name: string): Observable<any> {
@@ -32,7 +30,6 @@ export class PokemonService {
 
     this.http.get(this.apiUrl).subscribe((res: any) => {
       this.pokemons = res.results;
-      console.log('🚀 this.pokemons', this.pokemons);
     });
 
     return pokemons;
