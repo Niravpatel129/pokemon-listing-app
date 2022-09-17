@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid black;
+  background-color: rgba(0, 115, 255, 0.184);
+
+  &:hover {
+    background-color: rgba(0, 115, 255, 0.5);
+    cursor: pointer;
+  }
+
+  img {
+    width: 150px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: 0 10px;
+
+    .name {
+      font-weight: bold;
+      font-size: 26px;
+
+      .type {
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+  }
+}

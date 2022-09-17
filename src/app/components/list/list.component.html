@@ -1,0 +1,11 @@
+<div class="container" *ngFor="let pokemon of pokemons">
+  <img [src]="pokemon.image" alt="" />
+  <div class="content">
+    <div class="name">
+      {{ pokemon.name }}
+      <div class="type">
+        {{ pokemon.type }}
+      </div>
+    </div>
+  </div>
+</div>
