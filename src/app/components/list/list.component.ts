@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Pokemon from 'src/types/Pokemon.type';
 
 @Component({
@@ -6,10 +6,7 @@ import Pokemon from 'src/types/Pokemon.type';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
   @Input() pokemons: Pokemon[] | undefined;
-
-  ngOnInit(): void {
-    console.log(this.pokemons);
-  }
+  @Output() selectPokemon = new EventEmitter<Pokemon>();
 }

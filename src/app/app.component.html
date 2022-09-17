@@ -1,4 +1,7 @@
 <div class="app-container">
-  <app-list [pokemons]="getAllPokemons()"></app-list>
-  <app-view></app-view>
+  <app-list
+    (selectPokemon)="handleSelectPokemon($event)"
+    [pokemons]="getAllPokemons()"
+  ></app-list>
+  <app-view [selectedPokemon]="selectedPokemon"></app-view>
 </div>

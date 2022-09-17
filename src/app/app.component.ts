@@ -9,10 +9,16 @@ import { PokemonService } from './services/pokemon.service';
 })
 export class AppComponent {
   title = 'pokemon-listing-app';
+  selectedPokemon: Pokemon | undefined;
 
   constructor(private PokemonService: PokemonService) {}
 
   getAllPokemons(): Pokemon[] {
     return this.PokemonService.getPokemons();
+  }
+
+  handleSelectPokemon(pokemon: Pokemon) {
+    console.log('hi');
+    this.selectedPokemon = pokemon;
   }
 }

@@ -1,5 +1,9 @@
-<div class="container" *ngFor="let pokemon of pokemons">
-  <img [src]="pokemon.image" alt="" />
+<div
+  class="container"
+  *ngFor="let pokemon of pokemons"
+  (click)="selectPokemon.emit(pokemon)"
+>
+  <img [src]="pokemon.image" [alt]="pokemon.name" />
   <div class="content">
     <div class="name">
       {{ pokemon.name }}
