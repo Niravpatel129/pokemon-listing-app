@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Pokemon from 'src/types/Pokemon.type';
 import { PokemonService } from './services/pokemon.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class AppComponent {
 
   constructor(private PokemonService: PokemonService) {}
 
-  getAllPokemons() {
+  getAllPokemons(): Pokemon[] {
     return this.PokemonService.getPokemons();
   }
 }

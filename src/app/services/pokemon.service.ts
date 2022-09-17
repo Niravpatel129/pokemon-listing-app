@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import Pokemon from 'src/types/Pokemon.type';
 
 @Injectable({
   providedIn: 'root',
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class PokemonService {
   constructor() {}
 
-  getPokemons() {
+  getPokemons(): Pokemon[] {
     return [
       {
         name: 'Bulbasaur',
